@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">geoquiz</string>
+    <string name="btn_true">True</string>
+    <string name="btn_false">False</string>
+    <string name="toast_correct">Correct!</string>
+    <string name="toast_wrong">Wrong!</string>
+    <string name="title_activity_show_answer">ShowAnswer</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="are_you_sure_of_it">Are you sure of it?</string>
+    <string name="show">Show!</string>
+    <string name="it_s_too_hard_let_me_see_the_answer">It\'s too hard, let me see the answer!</string>
+</resources>
