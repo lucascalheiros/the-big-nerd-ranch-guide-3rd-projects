@@ -4,21 +4,24 @@ import android.os.Parcel
 import android.os.Parcelable
 
 data class Question(
-        val content: String?,
-        val answer: Boolean,
-        var guess: Boolean?
+        var content: String?,
+        var answer: Boolean?,
+        var guess: Boolean?,
+        var cheated: Boolean?
 ): Parcelable {
         constructor(parcel: Parcel) : this(
                 parcel.readString(),
-                parcel.readByte() != 0.toByte(),
+                parcel.readValue(Boolean::class.java.classLoader) as? Boolean,
+                parcel.readValue(Boolean::class.java.classLoader) as? Boolean,
                 parcel.readValue(Boolean::class.java.classLoader) as? Boolean
         ) {
         }
 
         override fun writeToParcel(parcel: Parcel, flags: Int) {
                 parcel.writeString(content)
-                parcel.writeByte(if (answer) 1 else 0)
+                parcel.writeValue(answer)
                 parcel.writeValue(guess)
+                parcel.writeValue(cheated)
         }
 
         override fun describeContents(): Int {
@@ -34,4 +37,5 @@ data class Question(
                         return arrayOfNulls(size)
                 }
         }
+
 }

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/startScreenFragment">
+
+    <fragment
+        android:id="@+id/startScreenFragment"
+        android:name="com.learning.geoquiz.ui.startScreen.StartScreenFragment"
+        android:label="start_screen_fragment"
+        tools:layout="@layout/start_screen_fragment" >
+        <action
+            android:id="@+id/action_startScreenFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="com.learning.geoquiz.ui.question.QuestionFragment"
+        android:label="question_fragment"
+        tools:layout="@layout/question_fragment" >
+        <action
+            android:id="@+id/action_questionFragment_to_answerFragment"
+            app:destination="@id/answerFragment" />
+        <action
+            android:id="@+id/action_questionFragment_to_scoreFragment"
+            app:destination="@id/scoreFragment"
+            app:popUpTo="@id/startScreenFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/answerFragment"
+        android:name="com.learning.geoquiz.ui.answer.AnswerFragment"
+        android:label="answer_fragment"
+        tools:layout="@layout/answer_fragment" >
+        <argument
+            android:name="question"
+            app:argType="com.learning.geoquiz.model.Question" />
+    </fragment>
+    <fragment
+        android:id="@+id/scoreFragment"
+        android:name="com.learning.geoquiz.ui.score.ScoreFragment"
+        android:label="score_fragment"
+        tools:layout="@layout/score_fragment" >
+        <action
+            android:id="@+id/action_scoreFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+        <argument
+            android:name="questionaryResult"
+            app:argType="com.learning.geoquiz.model.QuestionaryResult" />
+    </fragment>
+</navigation>

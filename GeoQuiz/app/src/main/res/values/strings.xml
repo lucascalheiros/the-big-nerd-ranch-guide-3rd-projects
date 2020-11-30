@@ -13,4 +13,14 @@
     <string name="are_you_sure_of_it">Are you sure of it?</string>
     <string name="show">Show!</string>
     <string name="it_s_too_hard_let_me_see_the_answer">It\'s too hard, let me see the answer!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_to_the_geoquiz">Welcome to the GeoQuiz</string>
+    <string name="start">Start!</string>
+    <string name="not_only_geo_but_still_a_quiz">(not only geo but still a quiz)</string>
+    <string name="previous_button">previous button</string>
+    <string name="next_button">next button</string>
+    <string name="question">Question</string>
+    <string name="your_score_is">Your score is:</string>
+    <string name="try_again">Try Again</string>
 </resources>
